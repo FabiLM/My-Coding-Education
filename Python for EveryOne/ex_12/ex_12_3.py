@@ -1,4 +1,3 @@
-
 import urllib.request, urllib.parse, urllib.error
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
@@ -16,18 +15,26 @@ soup = BeautifulSoup(html, "html.parser")
 
 # Retrieve all of the anchor tags
 count = 0
-soma = 0
-tags = soup('span')
+lst = list()
+tags = soup('a')
 for tag in tags:
-    # Look at the parts of a tag
-    #print('TAG:', tag)
+    x = tag.get('href', None)
+    lst.append(x)
+
+lista = list()
+
+for count >= 0 or count < 4:
+   url = lst[2]
+   html = urllib.request.urlopen(url, context=ctx).read()
+   soup = BeautifulSoup(html, "html.parser")
+counti = 1
+
+for tag in tags:
+    x = tag.get('href', None)
+    lista.append(x)
+    counti = counti + 1
+
+print(lista[2])
+print(counti)
+
     #print('URL:', tag.get('href', None))
-    #print('Contents:', tag.contents[0])
-    #print('Attrs:', tag.attrs)
-    x = tag.contents[0]
-    ix = int(x)
-    #print(ix)
-    soma = soma + ix
-    count = count + 1
-print('Count', count)
-print('Sum',soma)

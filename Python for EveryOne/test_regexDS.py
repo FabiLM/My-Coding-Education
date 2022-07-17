@@ -1,9 +1,10 @@
-import re
+import
+
 def result():
     s = 'ACAABAACAAABACDBADDDFSDDDFFSSSASDAFAAACBAAAFASD'
 
     result = []
-    # compete the pattern below
+    # complete the pattern below
     pattern = '''(\S)([A]{3})'''
     for item in re.finditer(pattern, s):
       # identify the group number below.

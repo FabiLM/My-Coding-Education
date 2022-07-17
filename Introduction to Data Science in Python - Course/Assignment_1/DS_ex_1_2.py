@@ -1,7 +1,9 @@
 import re
+
 fname = input('Enter file name:')
 fh = open(fname)
 logdata = fh.read()
+
 def logs() :
 
     host = re.findall('[\d]+\.[\d]+\.[\d]+\.[\d]+', logdata)

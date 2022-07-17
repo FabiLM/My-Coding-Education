@@ -22,11 +22,9 @@ print('Comment count:',len(lst))
 soma = 0
 count = 0
 for item in lst:
-    #print('Name',item.find('name').text)
     x = item.find('count').text
-    #print(x)
     ix = int(x)
-    #print(ix)
     soma = soma + ix
     count = count + 1
+
 print('Soma',soma)

@@ -1,14 +1,17 @@
 largest = None
 smallest = None
+
 while True:
     val = input('Enter a number: ')
     if val =='done' :
         break
+
     try:
         ival = int(val)
     except:
         print('Invalid input')
         continue
+        
     if smallest is None :
         smallest  = ival
     elif ival < smallest :
